@@ -2,6 +2,14 @@ package FindAlgorithms;
 
 public class ArrayMaxValue {
 
+    /*
+        by @heiphin7
+
+        Простой алгоритм для поиска максимального значения в массиве
+        которая работает за O(n), - линейное время работы
+
+    */
+
     public static int findMaxInArray(int[] array) {
 
         // Если передан пустой массив, возвращаем значение 0

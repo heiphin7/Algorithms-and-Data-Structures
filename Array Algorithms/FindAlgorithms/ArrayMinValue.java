@@ -1,10 +1,13 @@
 package FindAlgorithms;
 
-/*
-    by @heiphin7
-*/
-
 public class ArrayMinValue {
+
+    /*
+        by @heiphin7
+
+        Простой алгоритм для поиска минимального значения в массиве чисел
+        которая работает за O(n), - линейное время работы
+    */
 
     public static int findMinInArray(int[] array) {
 
