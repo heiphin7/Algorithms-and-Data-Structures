@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Dynamic Programming Algorithms/Dynamic Programming Algorithms.iml" filepath="$PROJECT_DIR$/Dynamic Programming Algorithms/Dynamic Programming Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringAlgorithms.iml" filepath="$PROJECT_DIR$/StringAlgorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/algorithms.iml" filepath="$PROJECT_DIR$/.idea/algorithms.iml" />
     </modules>

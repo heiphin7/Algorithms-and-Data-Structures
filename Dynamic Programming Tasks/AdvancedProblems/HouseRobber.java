@@ -1,4 +1,4 @@
-package BasicProblems;
+package AdvancedProblems;
 
 public class HouseRobber {
 
