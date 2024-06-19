@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Array Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/String Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Dynamic Programming Tasks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Codeforces" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
