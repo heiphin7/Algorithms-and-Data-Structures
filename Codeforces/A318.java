@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class A318 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        long n = scanner.nextInt();
-        long k = scanner.nextInt();
+        long n = scanner.nextLong();
+        long k = scanner.nextLong();
 
         if (k == 1) {
             System.out.println(1);
