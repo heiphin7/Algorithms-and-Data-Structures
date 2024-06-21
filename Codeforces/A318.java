@@ -8,24 +8,30 @@ import java.util.Scanner;
 public class A318 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        long n = scanner.nextLong();
-        long k = scanner.nextLong();
+        long n = scanner.nextInt();
+        long k = scanner.nextInt();
 
-        int[] arr = new int[(int) n];
-        int indexOfOdd = 0;
-        int indexOfEven = arr.length % 2 == 0 ? arr.length / 2: arr.length / 2 + 1;
-
-        for (int i = 1; i <= n; i++) {
-
-            if (i % 2 == 0) {
-                arr[indexOfEven] = i;
-                indexOfEven++;
-            } else {
-                arr[indexOfOdd] = i;
-                indexOfOdd++;
-            }
+        if (k == 1) {
+            System.out.println(1);
+            return;
         }
 
-        System.out.println(arr[(int) k - 1]);
+        if (n % 2 == 0) {
+            if (k == n/2) {
+                System.out.println(n-1);
+            } else if (k < n/2) {
+                System.out.println((k * 2) - 1);
+            } else {
+                System.out.println((k - n/2) *2);
+            }
+        } else {
+            if (k == n/2 + 1) {
+                System.out.println(n);
+            } else if (k < n/2 + 1) {
+                System.out.println((k*2) - 1);
+            } else {
+                System.out.println((k - (n/2 + 1)) * 2);
+            }
+        }
     }
 }
