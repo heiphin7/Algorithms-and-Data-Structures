@@ -3,6 +3,13 @@
 
 using namespace std;
 
+/*
+    by @heiphin7
+
+    Нахождение максимального значения за линейное время O(n)
+*/
+
+
 	int main() {
 		int n;
 		cin >> n;

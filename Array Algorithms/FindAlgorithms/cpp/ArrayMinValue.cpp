@@ -3,11 +3,13 @@
 
 	using namespace std;
 
-    class ArrayUtils {
+	/*
+	    by @heiphin7
 
-    public:
-        // ѕубличный метод класса
-        static int findMinValue() {
+	    Ќахождение минимальное значени€ за линейное врем€ O(n)
+	*/
+
+        int findMinValue() {
             int n, target;
             cin >> n >> target;
 

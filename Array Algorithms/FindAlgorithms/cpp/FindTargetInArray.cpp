@@ -1,8 +1,14 @@
 #include <iostream>
 #include <vector>
 
-
 using namespace std;
+
+/*
+    by @heiphin7
+
+    Нахождение индекса нужного элемента в массиве за O(n), то есть линейное время
+    Цикл, который заполняет массив, не считается, так как это ввод данных
+*/
 
 int main() {
 	int n, target;
