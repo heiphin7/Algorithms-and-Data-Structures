@@ -1,5 +1,8 @@
 # file for output
 out
 
+# Intellij IDEA files
+.idea
+
 # c++ output & project files from vs
 Algorithms
