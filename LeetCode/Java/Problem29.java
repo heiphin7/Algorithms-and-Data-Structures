@@ -8,42 +8,19 @@ package Java;
     ”читыва€ две строки, игла и стог сена, верните индекс первого вхождени€
     иглы в стоге сена или -1, если игла не €вл€етс€ частью стога сена.
 
+    V1
     «десь идет довольно мудренное решение, но при этом она работает за 10ms (в литкоде).
     ћы, на каждой итерации разбиваем строку на подстроки, длина которых равна needle.length().
     ј затем просто сравниваем подстроку с данной нам строкой.
+
+    UPDATE:
+    ƒобавлено более улучшенное решение (за 1 строку).
+    «десь испольуетс€ уже готовое решение ввиде команды indexOf();
 */
 
 
 public class Problem29 {
     public int strStr(String haystack, String needle) {
-        if (needle.equals(haystack)) {
-            return 0;
-        }
-
-        int n = needle.length();
-
-        if (n == 1) {
-            return searchSingleChar(haystack, needle);
-        }
-
-
-        for(int i = 0; i <= haystack.length() - n; i++) {
-            System.out.println(haystack.substring(i, i+n));
-            if (haystack.substring(i, i+n).equals(needle)) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
-
-    int searchSingleChar(String haystack, String needle) {
-        for(int i = 0; i < haystack.length(); i++) {
-            if (String.valueOf(haystack.charAt(i)).equals(needle)) {
-                return i;
-            }
-        }
-
-        return -1;
+        return haystack.indexOf(needle);
     }
 }
