@@ -5,6 +5,7 @@ public class Array {
     private int current_index;
     private int[] arr;
 
+    // Способ инициализации с указанием размера
     public Array(int size) {
         this.arr = new int[size];
         this.current_index = 0;
@@ -15,9 +16,20 @@ public class Array {
         this.current_index = 0;
     }
 
-    public int add(int num) { // возвращает индекс добавленного элемента
+
+    // Добавление в конец массива
+    public void add(int num) {
         arr[current_index] = num;
-        return current_index;
+        current_index++;
+    }
+
+    // Добавление с указанием элемента
+    public void add(int num, int index) {
+        arr[index] = num;
+    }
+
+    public int size() {
+        return current_index + 1;
     }
 
     public int get(int i) {
