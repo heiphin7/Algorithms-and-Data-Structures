@@ -1,53 +1,72 @@
 package Java;
 
 public class Array {
-    private int size; // Размер массива
-    private int current_index;
-    private int[] arr;
+    private int index;
+    private int[] array;
+    private int size;
 
-    // Способ инициализации с указанием размера
     public Array(int size) {
-        this.arr = new int[size];
-        this.current_index = 0;
+        this.size = size;
+        this.array = new int[size];
+        this.index = 0;
     }
 
     public Array() {
-        this.arr = new int[10]; // DEFAULT SIZE
-        this.current_index = 0;
+        this.array = new int[10]; // 10 - default size of array
+        this.index = 0;
+        this.size = 10;
     }
 
-
-    // Добавление в конец массива
     public void add(int num) {
-        // TODO Сделать чтобы проверялась длина массива
-        // То есть, чтобы массив увеличивался при надобности
+        // Если нужно увеличить размер массива
+        if (index >= array.length) {
+            int[] newArray = new int[index + 1];
 
-        arr[current_index] = num;
-        current_index++;
+            for(int i = 0; i < array.length; i++) {
+                newArray[i] = array[i];
+            }
+
+            newArray[index] = num;
+            index++;
+            size++;
+
+            this.array = newArray;
+            return;
+        }
+
+        array[index] = num;
+        index++;
+        size++;
     }
 
-    // Добавление с указанием элемента
     public void add(int num, int index) {
-        if (i < 0 || i >= current_index) {
-            throw new IndexOutOfBoundsException("Index out of bounds");
+        if (index >= size || index < 0) {
+            throw new IndexOutOfBoundsException("Index out of bound!");
         }
 
-        arr[index] = num;
+        array[index] = num;
+        this.index++;
+        size++;
     }
 
-    public int size() {
-        return current_index + 1;
-    }
-
-    public int get(int i) {
-        if (i < 0 || i >= current_index) {
-            throw new IndexOutOfBoundsException("Index out of bounds");
+    public void printArray() {
+        for(int num: array) {
+            System.out.print(num + " ");
         }
-
-        return arr[i];
     }
 
-    public boolean isEmpty() {
-        return current_index == 0;
+    public static void main(String[] args) {
+        Array arr = new Array(3);
+
+        arr.add(1, 0);
+        arr.add(2);
+        arr.add(3);
+
+        // Тут уже будеть больший размер и должно создаваться новый массив
+        arr.add(4);
+        arr.add(5);
+
+        arr.printArray();
     }
+
 }
